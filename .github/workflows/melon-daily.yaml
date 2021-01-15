@@ -1,0 +1,19 @@
+name: Melon Daily
+
+on:
+  schedule:
+    - cron: '0 7-9 * * *'
+  workflow_dispatch:
+
+jobs:
+  melon_daily:
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 15
+      - run: npm install
+      - run: node melon-daily.js
+        env:
+          JSONBIN_TOKEN: ${{ secrets.JSONBIN_TOKEN }}

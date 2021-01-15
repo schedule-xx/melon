@@ -1,0 +1,10 @@
+{
+  "name": "melon-daily",
+  "main": "index.js",
+  "version": "1.0.1",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "obliviate": "github:obliviate-xx/obliviate"
+  }
+}
